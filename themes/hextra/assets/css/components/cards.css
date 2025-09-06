@@ -1,0 +1,68 @@
+.hextra-cards {
+  grid-template-columns: repeat(auto-fill, minmax(max(250px, calc((100% - 1rem * 2) / var(--hextra-cards-grid-cols))), 1fr));
+}
+
+.hextra-card {
+  position: relative;
+}
+
+.hextra-card img {
+  user-select: none;
+}
+
+<<<<<<< HEAD
+.hextra-card:hover svg {
+  color: currentColor;
+}
+
+.hextra-card svg {
+=======
+.hextra-card:hover .hextra-card-icon svg {
+  color: currentColor;
+}
+
+.hextra-card .hextra-card-icon svg {
+>>>>>>> 2cd534b (first2)
+  width: 1.5rem;
+  color: #00000033;
+  transition: color 0.3s ease;
+}
+
+.hextra-card p {
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+<<<<<<< HEAD
+.dark .hextra-card svg {
+  color: #ffffff66;
+}
+
+.dark .hextra-card:hover svg {
+=======
+.dark .hextra-card .hextra-card-icon svg {
+  color: #ffffff66;
+}
+
+.dark .hextra-card:hover .hextra-card-icon svg {
+>>>>>>> 2cd534b (first2)
+  color: currentColor;
+}
+
+.hextra-card-tag {
+  position: absolute;
+<<<<<<< HEAD
+  top: 5px;
+  right: 5px;
+  z-index: 10;
+=======
+  z-index: 10;
+  top: 5px;
+  &:where(:dir(ltr)) {
+    right: 5px;
+  }
+  &:where(:dir(rtl)) {
+    left: 5px;
+  }
+>>>>>>> 2cd534b (first2)
+}

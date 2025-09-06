@@ -1,0 +1,30 @@
+backToTop: "Subir al inicio"
+changeLanguage: "Cambiar idioma"
+changeTheme: "Cambiar tema"
+<<<<<<< HEAD
+=======
+copyCode: "Copiar código"
+>>>>>>> 2cd534b (first2)
+copyright: "© 2025 Proyecto Hextra."
+dark: "Oscuro"
+editThisPage: "Edita esta página en GitHub →"
+lastUpdated: "Última actualización"
+light: "Claro"
+<<<<<<< HEAD
+noResultsFound: "No hubo resultados."
+onThisPage: "En esta página"
+tags: "Etiquetas"
+poweredBy: "Con tecnología de Hextra"
+readMore: "Leer más →"
+searchPlaceholder: "Buscar..."
+=======
+next: "Siguiente"
+noResultsFound: "No hubo resultados."
+onThisPage: "En esta página"
+poweredBy: "Con tecnología de Hextra"
+previous: "Anterior"
+readMore: "Leer más →"
+searchPlaceholder: "Buscar..."
+system: "Sistema"
+tags: "Etiquetas"
+>>>>>>> 2cd534b (first2)

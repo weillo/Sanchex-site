@@ -1,0 +1,274 @@
+# Configuration
+baseURL: "https://example.com/"
+title: "Hextra"
+
+enableRobotsTXT: true
+# Parse Git commit
+enableGitInfo: true
+# enableEmoji: false
+hasCJKLanguage: true
+
+# services:
+#   googleAnalytics:
+#     ID: G-MEASUREMENT_ID
+
+outputs:
+<<<<<<< HEAD
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+=======
+  home: [html, llms]
+  page: [html]
+  section: [html, rss]
+>>>>>>> 2cd534b (first2)
+
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+    title: Hextra
+  fa:
+    languageName: فارسی
+    languageCode: fa
+    languageDirection: rtl
+    weight: 2
+    title: هگزترا
+<<<<<<< HEAD
+  ja:
+    languageName: 日本語
+    languageCode: ja
+    weight: 3
+    title: Hextra
+=======
+    params:
+      banner:
+        message: |
+          هگزترا **v0.11** منتشر شد! 🎉 [تازه‌ها را ببینید]({{% ref "blog/v0.11" %}})
+  ja:
+    languageName: 日本語
+    languageCode: ja-JP
+    weight: 3
+    title: Hextra
+    params:
+      banner:
+        message: |
+          Hextra **v0.11** がリリースされました！🎉 [新着情報はこちら]({{% ref "blog/v0.11" %}})
+>>>>>>> 2cd534b (first2)
+  zh-cn:
+    languageName: 简体中文
+    languageCode: zh-CN
+    weight: 4
+    title: Hextra
+<<<<<<< HEAD
+=======
+    params:
+      banner:
+        message: |
+          Hextra **v0.11** 发布啦！🎉 查看[更新内容]({{% ref "blog/v0.11" %}})
+>>>>>>> 2cd534b (first2)
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+
+  workspace: hugo.work
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
+    - identifier: versions
+      name: Versions
+      weight: 2
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 3
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 4
+    - identifier: showcase
+      name: Showcase
+      pageRef: /showcase
+      weight: 5
+<<<<<<< HEAD
+=======
+      params:
+        type: link
+        icon: collection
+>>>>>>> 2cd534b (first2)
+    - name: Search
+      weight: 6
+      params:
+        type: search
+    - name: GitHub
+      weight: 7
+      url: "https://github.com/imfing/hextra"
+      params:
+        icon: github
+    - identifier: development
+      name: Development ↗
+      url: https://imfing.github.io/hextra/versions/latest/
+      parent: versions
+<<<<<<< HEAD
+=======
+      params:
+        type: link
+        icon: beaker
+>>>>>>> 2cd534b (first2)
+    - identifier: v0.9
+      name: v0.9 ↗
+      url: https://imfing.github.io/hextra/versions/v0.9/
+      parent: versions
+
+  sidebar:
+    - identifier: more
+      name: More
+      params:
+        type: separator
+      weight: 1
+    - identifier: about
+      name: "About"
+      pageRef: "/about"
+      weight: 2
+    - identifier: hugoDocs
+      name: "Hugo Docs ↗"
+      url: "https://gohugo.io/documentation/"
+      weight: 3
+
+params:
+  description: Modern, responsive, batteries-included Hugo theme for creating beautiful static websites.
+
+<<<<<<< HEAD
+=======
+  externalLinkDecoration: true
+
+  banner:
+    key: 'announcement-v0.11'
+    message: |
+      Hextra **v0.11** is here! 🎉 Discover [what's new]({{% ref "blog/v0.11" %}})
+
+>>>>>>> 2cd534b (first2)
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      dark: images/logo-dark.svg
+      # width: 40
+      # height: 20
+      # link: /
+    width: wide
+
+<<<<<<< HEAD
+  page:
+    # full (100%), wide (90rem), normal (80rem)
+    width: normal
+
+=======
+>>>>>>> 2cd534b (first2)
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+
+  # Display the last modification date
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  # Search
+  # flexsearch is enabled by default
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      # full | forward | reverse | strict
+      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
+      tokenize: forward
+
+  editURL:
+    enable: true
+    base: "https://github.com/imfing/hextra/edit/main/exampleSite/content"
+
+  blog:
+    list:
+      displayTags: true
+      # date | lastmod | publishDate | title | weight
+      sortBy: date
+      sortOrder: desc # or "asc"
+<<<<<<< HEAD
+=======
+      # Pagination
+      pagerSize: 20
+>>>>>>> 2cd534b (first2)
+
+    article:
+      displayPagination: true
+
+  toc:
+    displayTags: true
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+<<<<<<< HEAD
+=======
+  page:
+    # full (100%), wide (90rem), normal (80rem)
+    width: normal
+    # tabs:
+    #   sync: true
+
+>>>>>>> 2cd534b (first2)
+  comments:
+    enable: false
+    type: giscus
+
+    # https://giscus.app/
+    giscus:
+      repo: imfing/hextra
+      repoId: R_kgDOJ9fJag
+      category: General
+      categoryId: DIC_kwDOJ9fJas4CY7gW
+      # mapping: pathname
+      # strict: 0
+      # reactionsEnabled: 1
+      # emitMetadata: 0
+      # inputPosition: top
+      # lang: en
+      # theme: noborder_dark

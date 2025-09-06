@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+=======
+{{- /*
+Create an icon.
+
+@param {string} name The name of the icon.
+@param {string} attributes The attributes of the icon.
+
+or
+
+@param {string} 0 The name of the icon.
+
+@example {{< icon name="github" >}}
+@example {{< icon "github" >}}
+*/ -}}
+
+>>>>>>> 2cd534b (first2)
+{{- $name := .Get "name" | default (.Get 0) -}}
+{{- $icon := index site.Data.icons $name -}}
+{{- $attributes := .Get "attributes" | default "height=1em"}}
+
+{{- if not $icon -}}
+  {{ errorf "icon %q not found" $name }}
+{{- end -}}
+
+{{- $icon = replaceRE "<svg" (printf "<svg %s" $attributes) $icon -}}
+
+<<<<<<< HEAD
+<span class="hx:inline-block hx:align-text-bottom icon">
+=======
+<span class="hx:inline-block hx:align-text-bottom hextra-icon">
+>>>>>>> 2cd534b (first2)
+  {{- $icon | safeHTML -}}
+</span>

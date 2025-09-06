@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="{{ .Site.Language.Lang }}">
+  {{- partial "head.html" . -}}
+  <body dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+=======
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "banner.html" . -}}
+>>>>>>> 2cd534b (first2)
+    {{- partial "navbar.html" . -}}
+    {{- block "main" . }}{{ end -}}
+    {{- if or (eq .Site.Params.footer.enable nil) (.Site.Params.footer.enable) }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

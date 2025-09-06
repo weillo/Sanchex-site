@@ -1,0 +1,85 @@
+baseURL: /
+# https://wello.codeberg.page/Sanchex-site/
+languageCode: en-us
+title: sanchex
+
+module:
+  imports:
+    - path: hextra
+    
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo.png
+      dark: images/logo.png
+      link: /
+      width: 40
+      height: 20
+      search:
+        enable: true
+        type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      
+  theme:
+      default: light
+      displayToggle: true
+      
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+  
+  page:
+      width: normal
+      
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+      
+  displayUpdatedDate: true
+  
+  description: sebuah sanchex-site
+      
+menu:
+  main:
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 1
+    - identifier: blog
+      name: blog
+      pageRef: /blog
+      weight: 2
+    - name: whatsapp
+      weight: 3
+      url: "https://whatsapp.com/channel/0029VbAeU07FMqrR9s3v4P3a"
+      params:
+        icon: whatsapp
+    - name: Search
+      weight: 4
+      params:
+        type: search
+        
+  sidebar:
+    - identifier: more
+      name: More
+      params:
+        type: separator
+      weight: 1
+    - identifier: about
+      name: "About"
+      pageRef: "/about"
+      weight: 2
+
+      
+caches:
+  images:
+    dir: :cacheDir/images

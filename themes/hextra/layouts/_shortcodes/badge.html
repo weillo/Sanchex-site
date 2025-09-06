@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+{{- if .IsNamedParams -}}
+  {{- $content := .Get "content" -}}
+  {{- $type := .Get "type" | default "" -}}
+  {{- $class := .Get "class" | default "" -}}
+  {{- $link := .Get "link" | default "" -}}
+  {{- $icon := .Get "icon" | default "" -}}
+=======
+{{- /*
+A shortcode to create a badge.
+
+@param {string} content The content of the badge.
+@param {string} color The color of the badge.
+@param {string} class The class of the badge.
+@param {string} link The link of the badge.
+@param {string} icon The icon of the badge.
+
+or
+
+@param {string} 0 The content of the badge.
+
+@example {{< badge content="Badge" color="blue" >}}
+@example {{< badge "Badge" >}}
+*/ -}}
+
+{{- if .IsNamedParams -}}
+  {{- $content := .Get "content" -}}
+  {{- $color := .Get "color" | default (.Get "type") | default "" -}}{{- /* Compatibility with previous parameter. */ -}}
+  {{- $class := .Get "class" | default "" -}}
+  {{- $link := .Get "link" | default "" -}}
+  {{- $icon := .Get "icon" | default "" -}}
+  {{- $border := not (eq (.Get "border") false) | default true }}
+>>>>>>> 2cd534b (first2)
+
+  {{- if $link -}}
+    <a href="{{ $link }}" title="{{ $content | plainify }}" target="_blank">
+      {{- partial "shortcodes/badge.html" (dict
+        "content" $content 
+<<<<<<< HEAD
+        "type" $type
+        "class" $class
+        "border" true
+=======
+        "color" $color
+        "class" $class
+        "border" $border
+>>>>>>> 2cd534b (first2)
+        "icon" $icon
+        )
+      -}}
+    </a>
+  {{- else -}}
+    {{- partial "shortcodes/badge.html" (dict
+      "content" $content 
+<<<<<<< HEAD
+      "type" $type
+      "class" $class
+      "border" true
+=======
+      "color" $color
+      "class" $class
+      "border" $border
+>>>>>>> 2cd534b (first2)
+      "icon" $icon
+      )
+    -}}
+  {{- end -}}
+{{- else -}}
+  {{- $content := .Get 0 -}}
+  {{- partial "shortcodes/badge.html" (dict
+    "content" $content 
+    "border" true
+    )
+  -}}
+{{- end -}}
